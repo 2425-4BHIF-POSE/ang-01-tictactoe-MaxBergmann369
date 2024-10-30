@@ -1,0 +1,14 @@
+<div class="board">
+  @for (row of board; track $index) {
+    <div class="row">
+      @for (cell of row; track $index) {
+        <app-field
+          [field]="cell"
+          (onClicked)="makeMove(cell.position[0], cell.position[1])">
+        </app-field>
+      }
+    </div>
+  } @empty {
+    <span>Das Spielfeld ist leer!</span>
+  }
+</div>
