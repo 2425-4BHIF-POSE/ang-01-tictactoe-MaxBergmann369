@@ -11,5 +11,10 @@
   } @empty {
     <span>Das Spielfeld ist leer!</span>
   }
+  <div class="message-container">
+    <div class="message">{{statusMessage}}</div>
+    @if(gameOver) {
+      <a class="btn" (click)="resetGame()">Restart</a>
+    }
+  </div>
 </div>
-<div class="message">{{statusMessage}}</div>

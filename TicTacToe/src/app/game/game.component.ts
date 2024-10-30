@@ -29,6 +29,13 @@ export class GameComponent {
     );
   }
 
+  protected resetGame() {
+    this.resetBoard();
+    this.currentPlayer = 'X';
+    this.statusMessage = "Turn of Player: X";
+    this.gameOver = false;
+  }
+
   protected makeMove(row: number, col: number) {
     const cell = this.board[row][col];
     if (cell.content === "" && !this.gameOver) {

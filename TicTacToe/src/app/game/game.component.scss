@@ -1,15 +1,24 @@
 .board {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 20rem;
   margin: auto;
 }
 .row {
   display: flex;
 }
-.message {
+.message-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+}
+.message {
+  justify-content: left;
+}
+.btn {
+  margin-left: 1rem;
+  border-radius: 1rem;
+  color: dodgerblue;
+}
+.btn:hover {
+  background-color: lightblue;
 }
